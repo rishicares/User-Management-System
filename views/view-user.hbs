@@ -1,0 +1,103 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb bg-transparent">
+    <li class="breadcrumb-item"><a
+        href="/"
+        class="text-decoration-none text-dark"
+      >Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View User</li>
+  </ol>
+</nav>
+
+{{#each rows}}
+  <div class="view-user p-5">
+
+    <div class="container">
+      <div class="col-lg-12">
+        <div
+          class="d-flex justify-content-between align-items-center p-3 bg-primary text-white rounded"
+        >
+          <h2 class="mb-0">{{this.first_name}} {{this.last_name}}</h2>
+          <a href="../edituser/{{this.id}}" class="btn btn-light"><i
+              class="bi bi-pencil"
+            ></i>
+            Edit</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+              User Information
+            </div>
+            <div class="card-body">
+
+              <div class="form-group mb-3">
+                <label for="firstName" class="mb-1">First Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  value="{{this.first_name}}"
+                  readonly
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="lastName" class="mb-1">Last Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  value="{{this.last_name}}"
+                  readonly
+                />
+              </div>
+              <div class="form-group mb-3">
+                <label for="email" class="mb-1">Email:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  value="{{this.email}}"
+                  readonly
+                />
+              </div>
+              <div class="form-group mb-4">
+                <label for="phone" class="mb-1">Phone Number:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  value="{{this.phone}}"
+                  readonly
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+              Remarks
+            </div>
+            <div class="card-body">
+              <div class="form-group mb-3">
+                <label for="remarks" class="mb-1">Remarks:</label>
+                <textarea
+                  class="form-control"
+                  id="remarks"
+                  readonly
+                >{{this.remark}}</textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+{{/each}}

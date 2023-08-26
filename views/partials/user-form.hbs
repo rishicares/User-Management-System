@@ -1,0 +1,87 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          User Information
+        </div>
+        <div class="card-body">
+          <div class="form-group mb-3">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                value="{{this.first_name}}"
+                placeholder="First Name"
+                name="first_name"
+              />
+              <label for="firstName">First Name</label>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                value="{{this.last_name}}"
+                placeholder="Last Name"
+                name="last_name"
+              />
+              <label for="lastName">Last Name</label>
+            </div>
+          </div>
+          <div class="form-group mb-3">
+            <div class="form-floating mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                value="{{this.email}}"
+                placeholder="email@email.com"
+                name="email"
+              />
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="form-group mb-4">
+            <div class="form-floating mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="floatingInput"
+                value="{{this.phone}}"
+                placeholder="Phone"
+                name="phone"
+              />
+              <label for="phone">Phone</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 mx-auto">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          Remarks
+        </div>
+        <div class="card-body">
+          <div class="form-group mb-3">
+            <label for="comments" class="mb-1">Remarks:</label>
+            <textarea
+              class="form-control"
+              placeholder="Leave a remark here"
+              id="comments"
+              name="comments"
+              style="height: 200px"
+            >{{this.remark}}</textarea>
+          </div>
+          <div class="d-grid">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

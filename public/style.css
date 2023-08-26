@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    background-color: #EEEFF3;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    width: 375px;
+    border: none;
+    border-radius: 10px;
+}
+
+.media {
+    border: 1px solid #EBEDEC;
+}
+
+.fa-angle-down {
+    margin-top: 13px;
+}
+
+p.text-muted {
+    font-size: 14px;
+}
+
+.list {
+    list-style: none;
+    line-height: 50px;
+    font-size: 14px;
+}
+
+ul.list li:hover {
+    border: none;
+    background-color: #ECF2FE;
+    color: #224bba;
+    cursor: pointer;
+}
+
+.no-decoration{
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    font-size: 14px;
+}
+
+.btn-action {
+    margin-right: 5px;
+}
+
+
+ /* Add a transition effect for the navbar */
+ #navbar {
+     transition: top 0.5s;
+ }
+
+ /* Add a class to adjust the top padding of the content to prevent it from being overlapped by the hidden navbar */
+ .content {
+     padding-top: 70px;
+     /* Adjust this value to match your navbar height */
+ }
+
+ /* Hide the browser's default checkbox */
+ .checkbox-wrap input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+ }
+
+ /* Create a custom checkbox */
+ .checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+
+ /* Create the checkmark/indicator (hidden when not checked) */
+ .checkmark:after {
+     content: "\f0c8";
+     font-family: "FontAwesome";
+     position: absolute;
+     color: rgba(0, 0, 0, 0.1);
+     font-size: 20px;
+     margin-top: -14px;
+     -webkit-transition: 0.3s;
+     -o-transition: 0.3s;
+     transition: 0.3s;
+ }
+
+ @media (prefers-reduced-motion: reduce) {
+     .checkmark:after {
+         -webkit-transition: none;
+         -o-transition: none;
+         transition: none;
+     }
+ }
+
+ /* Show the checkmark when checked */
+ .checkbox-wrap input:checked~.checkmark:after {
+     display: block;
+     content: "\f14a";
+     font-family: "FontAwesome";
+     color: rgba(0, 0, 0, 0.2);
+ }
+
+ /* Style the checkmark/indicator */
+ .checkbox-primary {
+     color: #40bfc1;
+ }
+
+ .checkbox-primary input:checked~.checkmark:after {
+     color: #40bfc1;
+ }
+
+ nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 999;
+ }
+
+ nav.is-hidden {
+     display: none;
+ }
+
+ @media (min-width: 768px) {
+     nav {
+         transition: opacity 0.5s ease-in-out;
+     }
+
+     nav.is-hidden {
+         opacity: 0;
+     }
+ }
+
+ nav.is-visible {
+     opacity: 1;
+ }
